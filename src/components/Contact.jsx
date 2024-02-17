@@ -60,7 +60,7 @@ function Contact(props) {
 
     return (
         <div className="bg-backgroundColorPrimary">
-            <div id="Contact" className="mx-auto flex flex-col min-h-screen justify-center w-3/4 md:w-2/3 xl:w-1/2 py-24">
+            <div id="Contact" className="mx-auto flex flex-col min-h-screen justify-center px-8 md:px-0 md:w-2/3 xl:w-1/2 py-24">
                 <h1 className="text-xl text-textColorTertiary">
                     {heading}
                 </h1>
@@ -102,7 +102,7 @@ function Contact(props) {
                         </button>
                     </form>
 
-                    <div className='md:w-1/2 md:h-[650px] h-[550px] '>
+                    <div className='md:w-1/2 md:h-[650px] h-[350px] '>
                         <EarthCanvas />
                     </div>
                 </div>
