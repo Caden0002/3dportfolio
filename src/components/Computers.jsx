@@ -61,7 +61,6 @@ const ComputersCanvas = () => {
         >
             <OrbitControls
                 enableZoom={false}
-                enablePan={false} // Disable vertical panning
                 maxPolarAngle={Math.PI / 2}
                 minPolarAngle={Math.PI / 2}
             />
