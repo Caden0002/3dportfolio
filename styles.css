@@ -1,0 +1,30 @@
+.gradient-link {
+    background-image: linear-gradient(to right, #62fad7 0%, #c84de7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-decoration: none;
+    animation: gradientAnimation 3s infinite linear;
+}
+
+.border-gradient {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to top left, #62fad7, #c84de7); /* Set initial border gradient */
+    border-image-slice: 1;
+    transition: border-image 0.3s ease; /* Apply transition effect on border-image property */
+}
+
+.border-gradient:hover {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom left, #62fad7, #c84de7); /* Change border gradient on hover */
+    border-image-slice: 1;
+    transition: border-image 0.3s ease; /* Apply transition effect on border-image property */
+}
+
+.feather {
+    transition: stroke 0.3s ease;
+}
+
+.feather:hover {
+    stroke: #62FAD7;
+}
