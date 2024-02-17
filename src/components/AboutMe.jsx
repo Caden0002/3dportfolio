@@ -40,7 +40,7 @@ function AboutMe() {
                     <h1 className="mt-6 space-y-2 text-lg text-textColorSecondary leading-loose font-inter">{content}</h1>
                     <h1 className="mt-6 space-y-2 text-lg text-textColorSecondary leading-loose font-inter">{content2}</h1>
                 </motion.div>
-                <motion.div initial={{ opacity: 0 }} animate={iconControls} className="mt-12 flex items-center w-full xl:w-3/4 justify-between" style={{ display: 'flex', gap: '10px' }}>
+                <motion.div initial={{ opacity: 0 }} animate={iconControls} className="mt-12 flex items-center w-full justify-between" style={{ display: 'flex', gap: '10px' }}>
                     {techStackIcons.map((tech, index) => (
                         <motion.div key={index} initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.5 * (index + 1) }} className="relative flex flex-col items-center justify-center border-gradient bg-backgroundColorTertiary md:h-48 md:w-48" style={{ boxShadow: '0 0 10px rgba(98, 250, 215, 0.7)' }}>
                             <div className="flex items-center justify-center">{tech.icon}</div>
