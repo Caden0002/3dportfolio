@@ -126,7 +126,7 @@ function Projectx() {
 
     return (
         <div className="bg-backgroundColorPrimary">
-            <div id="Projects" className="mx-auto flex flex-col h-full py-24 px-8 md:px-0 md:w-2/3 xl:w-1/2">
+            <div id="Projects" className="mx-auto flex flex-col h-full py-24 px-8 md:px-0 md:w-2/3 2xl:w-1/2">
                 {/* Header */}
                 <div className="md:w-full">
                     <h1 className="text-xl text-textColorTertiary">SOME THINGS I'VE BUILT</h1>

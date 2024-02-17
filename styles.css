@@ -14,11 +14,19 @@
     transition: border-image 0.3s ease; /* Apply transition effect on border-image property */
 }
 
+/* Change border gradient on hover */
 .border-gradient:hover {
-    border: 2px solid transparent;
+    border: 4px solid transparent;
     border-image: linear-gradient(to bottom left, #62fad7, #c84de7); /* Change border gradient on hover */
     border-image-slice: 1;
     transition: border-image 0.3s ease; /* Apply transition effect on border-image property */
+}
+
+/* Hide border gradient for screens smaller than or equal to 1024px */
+@media (max-width: 1024px) {
+    .border-gradient {
+        border: 2px solid transparent; /* Set the border to transparent to hide it */
+    }
 }
 
 .feather {

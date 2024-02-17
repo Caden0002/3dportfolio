@@ -33,18 +33,18 @@ function AboutMe() {
 
     return (
         <div className="bg-backgroundColorPrimary">
-            <div id="AboutMe" className="mx-auto flex flex-col min-h-screen justify-center px-8 md:px-0 md:w-2/3 xl:w-1/2">
-                <motion.div ref={contentRef} initial={{ y: 20, opacity: 0 }} animate={contentControls} className="md:w-2/3">
+            <div id="AboutMe" className="mx-auto flex flex-col min-h-screen justify-center px-8 md:px-0 md:w-2/3 2xl:w-1/2">
+                <motion.div ref={contentRef} initial={{ y: 20, opacity: 0 }} animate={contentControls} className="lg:w-2/3">
                     <h1 className="text-xl text-textColorTertiary">{heading}</h1>
                     <h1 className="mt-4 text-6xl text-textColorPrimary font-bold">{heading2}</h1>
                     <h1 className="mt-6 space-y-2 text-lg text-textColorSecondary leading-loose font-inter">{content}</h1>
                     <h1 className="mt-6 space-y-2 text-lg text-textColorSecondary leading-loose font-inter">{content2}</h1>
                 </motion.div>
-                <motion.div initial={{ opacity: 0 }} animate={iconControls} className="mt-12 flex items-center w-full justify-between" style={{ display: 'flex', gap: '10px' }}>
+                <motion.div initial={{ opacity: 0 }} animate={iconControls} className="mt-12 flex items-center w-full md:justify-between" style={{ display: 'flex', gap: '10px' }}>
                     {techStackIcons.map((tech, index) => (
-                        <motion.div key={index} initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.5 * (index + 1) }} className="relative flex flex-col items-center justify-center border-gradient bg-backgroundColorTertiary md:h-48 md:w-48" style={{ boxShadow: '0 0 10px rgba(98, 250, 215, 0.7)' }}>
-                            <div className="flex items-center justify-center">{tech.icon}</div>
-                            <h1 className="hidden md:block mt-4 text-center text-textColorSecondary text-lg font-bold">{tech.name}</h1>
+                        <motion.div key={index} initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.5 * (index + 1) }} className="relative flex flex-col items-center justify-center border-gradient bg-backgroundColorTertiary md:h-48 md:w-48 mr-4 md:mr-0" >
+                            <div className="flex items-center justify-center ">{tech.icon}</div>
+                            <h1 className="hidden lg:block mt-4 text-center text-textColorSecondary text-lg font-bold">{tech.name}</h1>
                         </motion.div>
                     ))}
                 </motion.div>

@@ -9,7 +9,7 @@ const heading2 = "Other Noteworthy Projects";
 function MoreProjects() {
     return (
         <div className="bg-backgroundColorPrimary">
-            <div id="Experience" className="mx-auto flex flex-col min-h-screen w-2/3 xl:w-1/2 items-center ">
+            <div id="Experience" className="mx-auto flex flex-col min-h-screen w-2/3 2xl:w-1/2 items-center ">
                 <div className="md:w-full">
                     <h1 className="text-xl text-textColorTertiary text-center">{heading}</h1>
                     <h1 className="mt-4 text-6xl text-textColorPrimary text-center font-bold">{heading2}</h1>
