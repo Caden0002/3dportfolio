@@ -22,7 +22,7 @@ function Hero() {
                     {/* Content */}
                     <div className="absolute inset-25 md:left-1/4 text-textColorPrimary" style={{ top: '12.5%', zIndex: 1 }}>
                         <h1 className="text-xl text-textColorTertiary">{header}</h1>
-                        <h1 className="mt-4 text-6xl md:text-8xl xl:text-9xl font-bold">{name}</h1>
+                        <h1 className="mt-4 text-6xl md:text-8xl 2xl:text-9xl font-bold">{name}</h1>
                         <h1 className="mt-6 text-xl tracking-wide text-textColorSecondary">{header2}</h1>
                     </div>
 
