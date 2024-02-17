@@ -8,7 +8,7 @@ const backgroundStyle = {
     backgroundSize: 'cover',
 };
 const header = "Hi, my name is";
-const name = "Caden Chen.";
+const name = "Caden Che.";
 const header2 = "I design and build websites"
 
 
