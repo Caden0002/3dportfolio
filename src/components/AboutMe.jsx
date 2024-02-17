@@ -34,7 +34,7 @@ function AboutMe() {
     return (
         <div className="bg-backgroundColorPrimary">
             <div id="AboutMe" className="mx-auto flex flex-col min-h-screen justify-center px-8 md:px-0 md:w-2/3 2xl:w-1/2">
-                <motion.div ref={contentRef} initial={{ y: 20, opacity: 0 }} animate={contentControls} className="lg:w-2/3">
+                <motion.div ref={contentRef} initial={{ y: 20, opacity: 0 }} animate={contentControls} className="md:w-2/3">
                     <h1 className="text-xl text-textColorTertiary">{heading}</h1>
                     <h1 className="mt-4 text-6xl text-textColorPrimary font-bold">{heading2}</h1>
                     <h1 className="mt-6 space-y-2 text-lg text-textColorSecondary leading-loose font-inter">{content}</h1>
