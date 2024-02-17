@@ -65,22 +65,22 @@ function Project({ project }) {
         <motion.div ref={ref} initial={{ y: 20, opacity: 0 }} animate={controls} className="flex mt-12">
             <div className="grid grid-cols-12 relative">
                 {/* Image */}
-                <div className="col-start-1 col-span-12 md:col-span-7" style={{ height: '425px', overflowY: 'scroll' }}>
+                <div className="col-start-1 col-span-12 md:col-span-7" style={{ height: '375px', overflowY: 'scroll' }}>
                     <img src={project.image} alt={project.title} className="mx-auto" />
                 </div>
 
                 {/* Content */}
                 <div className="col-start-1 md:col-start-7 col-span-12 md:col-span-6 text-left md:text-right md:absolute z-10">
-                    <h3 className="hidden md:block text-lg text-textColorTertiary">{project.subtitle}</h3>
-                    <h3 className="mt-2 text-4xl font-bold text-textColorPrimary">{project.title}</h3>
-                    <p className="hidden md:block mt-6 space-y-2 text-sm text-textColorSecondary bg-backgroundColorTertiary shadow-lg py-8 px-6">
+                    <h3 className="hidden md:block text-base text-textColorTertiary">{project.subtitle}</h3>
+                    <h3 className="mt-2 text-3xl font-bold text-textColorPrimary">{project.title}</h3>
+                    <p className="hidden md:block mt-6 space-y-2 text-xs text-textColorSecondary bg-backgroundColorTertiary leading-relaxed	 shadow-lg py-8 px-6">
                         <span dangerouslySetInnerHTML={{ __html: project.description }} />
                     </p>
 
                     <div className="mt-6 space-x-4 justify-end">
                         {project.skills.map((skill, index) => (
                             <React.Fragment key={index}>
-                                <span className="text-textColorPrimary text-base my-1 font-medium">{skill}</span>
+                                <span className="text-textColorPrimary text-sm my-1 font-medium">{skill}</span>
                                 {index !== project.skills.length - 1 && <span className="text-textColorTertiary mx-2">•</span>}
                             </React.Fragment>
                         ))}
@@ -92,7 +92,7 @@ function Project({ project }) {
                             href={project.websiteLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-2xl text-textColorPrimary hover:text-textColorTertiary  " // Add flex and items-center
+                            className="text-lg text-textColorPrimary hover:text-textColorTertiary  " // Add flex and items-center
                         >
                             <FaShareSquare className="ml-2" /> {/* Add margin to the icon */}
                         </a>
@@ -100,7 +100,7 @@ function Project({ project }) {
                             href={project.githubLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-2xl text-textColorPrimary hover:text-textColorTertiary  " // Add flex and items-center
+                            className="text-lg text-textColorPrimary hover:text-textColorTertiary  " // Add flex and items-center
                         >
                             <FaGithub className="ml-2" /> {/* Add margin to the icon */}
                         </a>
@@ -109,7 +109,7 @@ function Project({ project }) {
                                 href={project.figmaLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-2xl text-textColorPrimary hover:text-textColorTertiary  "
+                                className="text-lg text-textColorPrimary hover:text-textColorTertiary  "
                             >
                                 <FaFigma className="ml-2" />
                             </a>
@@ -129,8 +129,8 @@ function Projectx() {
             <div id="Projects" className="mx-auto flex flex-col h-full py-24 px-8 md:px-0 md:w-2/3 2xl:w-1/2">
                 {/* Header */}
                 <div className="md:w-full">
-                    <h1 className="text-xl text-textColorTertiary">SOME THINGS I'VE BUILT</h1>
-                    <h1 className="mt-4 text-6xl text-textColorPrimary font-bold">Projects</h1>
+                    <h1 className="text-base text-textColorTertiary">SOME THINGS I'VE BUILT</h1>
+                    <h1 className="mt-4 text-5xl text-textColorPrimary font-bold">Projects</h1>
                 </div>
 
                 {/* Project Grid */}

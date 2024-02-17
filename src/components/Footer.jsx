@@ -17,17 +17,17 @@ function Footer(props) {
 
                 <div className="flex space-x-8  z-10">
                     <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                        <FaGithub size={20} className="mb-4 text-textColorSecondary hover:text-textColorTertiary"  />
+                        <FaGithub size={16} className="mb-4 text-textColorSecondary hover:text-textColorTertiary"  />
                     </a>
                     <a href={linkedinLink} target="_blank" rel="noopener noreferrer" >
-                        <FaLinkedin size={20} className="mb-4 text-textColorSecondary hover:text-textColorTertiary" />
+                        <FaLinkedin size={16} className="mb-4 text-textColorSecondary hover:text-textColorTertiary" />
                     </a>
                     <a href={mediumLink} target="_blank" rel="noopener noreferrer">
-                        <FaMediumM size={20} className="mb-4 text-textColorSecondary hover:text-textColorTertiary" />
+                        <FaMediumM size={16} className="mb-4 text-textColorSecondary hover:text-textColorTertiary" />
                     </a>
                 </div>
 
-                <a href={headingLink} target="_blank" rel="noopener noreferrer" className="font-mono text-sm text-textColorSecondary hover:text-textColorTertiary text-center z-10">
+                <a href={headingLink} target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-textColorSecondary hover:text-textColorTertiary text-center z-10">
                     {heading}
                 </a>
             </div>

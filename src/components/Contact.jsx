@@ -61,18 +61,18 @@ function Contact(props) {
     return (
         <div className="bg-backgroundColorPrimary">
             <div id="Contact" className="mx-auto flex flex-col min-h-screen justify-center px-8 md:px-0 md:w-2/3 2xl:w-1/2 py-24">
-                <h1 className="text-xl text-textColorTertiary">
+                <h1 className="text-base text-textColorTertiary">
                     {heading}
                 </h1>
-                <h1 className="mt-4 text-6xl text-textColorPrimary font-bold">
+                <h1 className="mt-4 text-5xl text-textColorPrimary font-bold">
                     {heading2}
                 </h1>
 
                 <div className="md:flex items-center justify-center z-10 mt-12 space-x-4">
-                    <form className="md:w-1/2 text-textColorTertiary">
-                        <div className="flex flex-col mb-4">
+                    <form className="md:w-1/2 text-textColorTertiary text-sm">
+                        <div className="flex flex-col mb-4 ">
                             <input type="text" placeholder="Name*" id="name" name="name"
-                                   className="border-b-2  border-textColorSecondary placeholder-textColorSecondary bg-transparent focus:outline-none w-full xl:mt-36 py-3 transition-transform hover:border-textColorTertiary"
+                                   className="border-b-2  border-textColorSecondary placeholder-textColorSecondary bg-transparent focus:outline-none w-full  py-3 transition-transform hover:border-textColorTertiary"
                                    value={formData.name} onChange={handleChange}
                             />
                         </div>
@@ -94,15 +94,27 @@ function Contact(props) {
                                       value={formData.message} onChange={handleChange}
                             />
                         </div>
-                        <button onClick={handleSubmit} type="button"
+                        {formSubmitted ? (
+                            <button
+                                type="button"
+                                className="border-2 border-gradient bg-backgroundColorTertiary mt-4 p-2 w-48"
+                                disabled
+                            >
+                                Message Sent!
+                            </button>
+                        ) : (
+                            <button
+                                onClick={handleSubmit}
+                                type="button"
                                 className={`border-2 border-gradient bg-backgroundColorTertiary mt-4 p-2 w-48 hover:shadow-lg hover:shadow-green-800 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
                                 disabled={loading}
-                        >
-                            {loading ? 'Sending...' : 'Send'}
-                        </button>
+                            >
+                                {loading ? 'Sending...' : 'Send'}
+                            </button>
+                        )}
                     </form>
 
-                    <div className='mt-12 md:mt-0 md:w-1/2 lg:h-[650px] h-[350px] '>
+                    <div className='mt-12 md:mt-0 md:w-1/2 md:h-[450px] h-[350px] '>
                         <EarthCanvas />
                     </div>
                 </div>

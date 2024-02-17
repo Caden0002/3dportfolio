@@ -48,10 +48,10 @@ const myExperience = [
 function Experience() {
     return (
         <div className="bg-backgroundColorPrimary">
-            <div id="Experience" className="mx-auto flex flex-col min-h-screen px-8 md:px-0 md:w-2/3 2xl:w-1/2 items-center ">
+            <div id="Experience" className="mx-auto flex flex-col min-h-screen px-8 md:px-0 md:w-3/4 2xl:w-1/2 items-center ">
                 <div className="md:w-full">
-                    <h1 className="text-xl text-textColorTertiary text-center">{heading}</h1>
-                    <h1 className="mt-4 text-6xl text-textColorPrimary text-center font-bold">{heading2}</h1>
+                    <h1 className="text-base text-textColorTertiary text-center">{heading}</h1>
+                    <h1 className="mt-4 text-5xl text-textColorPrimary text-center font-bold">{heading2}</h1>
                     <div className='my-24'>
 
                         <VerticalTimeline lineColor="linear-gradient(to bottom, #c84de7, #62fad7)">
@@ -66,10 +66,10 @@ function Experience() {
                                     iconStyle={{ background: '#fff' }}
                                     icon={experience.icon}
                                 >
-                                    <h3 className="vertical-timeline-element-title text-textColorTertiary text-xl font-bold ">{experience.title}</h3>
-                                    <h4 className="mt-2 vertical-timeline-element-subtitle text-textColorSecondary ">{experience.subtitle}</h4>
+                                    <h3 className="vertical-timeline-element-title text-textColorTertiary text-lg font-bold ">{experience.title}</h3>
+                                    <h4 className="mt-2 vertical-timeline-element-subtitle text-textColorSecondary text-base ">{experience.subtitle}</h4>
                                     {experience.description && (
-                                        <ul className="mt-4 text-textColorPrimary list-disc pl-6 space-y-2">
+                                        <ul className="mt-4 text-textColorPrimary list-disc pl-6 space-y-2 text-xs">
                                             <li>{experience.description}</li>
                                             {experience.description2 && <li>{experience.description2}</li>}
                                             {experience.description3 && <li>{experience.description3}</li>}
