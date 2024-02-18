@@ -97,7 +97,7 @@ function Contact(props) {
                         {formSubmitted ? (
                             <button
                                 type="button"
-                                className="border-2 border-gradient bg-backgroundColorTertiary mt-4 p-2 w-48"
+                                className="border-2 border-gradient bg-backgroundColorTertiary mt-4 p-2 w-48 opacity-50 cursor-not-allowed disabled-button"
                                 disabled
                             >
                                 Message Sent!

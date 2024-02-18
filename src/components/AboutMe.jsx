@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer';
 const heading = 'INTRODUCTION';
 const heading2 = 'About Me';
 const content = "I am a React Developer. I graduated with a Bachelor of Accountancy degree in 2023. Computers have always intrigued me, leading me to pursue a career in technology. I enjoy creating attractive and user-friendly interfaces. I'm passionate about using AI to address climate change and develop eco-friendly solutions. When I'm not working with computers, you can find me reading, running, or playing my piano.";
-const content2 = "Here are a few tech stack that I work with:";
+const content2 = "Here are a few <span style='color: #62FAD7;'>tech stack</span> that I work with:";
 const techStackIcons = [
     { name: 'React', icon: <img src="/react.svg" alt="React" />, link: 'https://reactjs.org/' },
     { name: 'Tailwind', icon: <img src="/tailwind.svg" alt="Tailwind" />, link: 'https://tailwindcss.com/' },
@@ -38,11 +38,13 @@ function AboutMe() {
                     <h1 className="text-base text-textColorTertiary">{heading}</h1>
                     <h1 className="mt-4 text-5xl text-textColorPrimary font-bold">{heading2}</h1>
                     <h1 className="mt-6 space-y-2 text-sm text-textColorSecondary leading-loose font-inter">{content}</h1>
-                    <h1 className="mt-6 space-y-2 text-sm text-textColorSecondary leading-loose font-inter">{content2}</h1>
+                    <h1 className="mt-6 space-y-2 text-sm text-textColorSecondary leading-loose font-inter">
+                        <span dangerouslySetInnerHTML={{ __html: content2 }} />
+                    </h1>
                 </motion.div>
                 <motion.div initial={{ opacity: 0 }} animate={iconControls} className="mt-12 flex items-center w-full md:justify-between" style={{ display: 'flex', gap: '10px' }}>
                     {techStackIcons.map((tech, index) => (
-                        <motion.div key={index} initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.5 * (index + 1) }} className="relative flex flex-col items-center justify-center border-gradient bg-backgroundColorTertiary md:h-40 md:w-40 mr-4 md:mr-0" >
+                        <motion.div key={index} initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.5 * (index + 1) }} className="relative flex flex-col items-center justify-center border-gradient md:bg-backgroundColorTertiary md:h-40 md:w-40 mr-4 md:mr-0" >
                             <div className="flex items-center justify-center ">{tech.icon}</div>
                             <h1 className="hidden lg:block mt-4 text-center text-textColorSecondary text-base font-bold">{tech.name}</h1>
                         </motion.div>
