@@ -9,11 +9,11 @@ const heading2 = 'About Me';
 const content = "I am a React Developer. I graduated with a Bachelor of Accountancy degree in 2023. Computers have always intrigued me, leading me to pursue a career in technology. I enjoy creating attractive and user-friendly interfaces. I'm passionate about using AI to address climate change and develop eco-friendly solutions. When I'm not working with computers, you can find me reading, running, or playing my piano.";
 const content2 = "Here are a few <span style='color: #62FAD7;'>tech stack</span> that I work with:";
 const techStackIcons = [
-    { name: 'React', icon: <img src="/react.svg" alt="React" />, link: 'https://reactjs.org/' },
-    { name: 'Tailwind', icon: <img src="/tailwind.svg" alt="Tailwind" />, link: 'https://tailwindcss.com/' },
-    { name: 'JavaScript', icon: <img src="/js.svg" alt="JavaScript" />, link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
-    { name: 'C', icon: <img src="/c.svg" alt="C" />, link: 'https://www.learn-c.org/' },
-    { name: 'Python', icon: <img src="/python.svg" alt="Python" />, link: 'https://www.python.org/' },
+    { name: 'React', icon: <img src="/react.svg" alt="React" /> },
+    { name: 'Tailwind', icon: <img src="/tailwind.svg" alt="Tailwind" />},
+    { name: 'Figma', icon: <img src="/figma.svg" alt="Figma" />},
+    { name: 'Framer Motion', icon: <img src="/framer.svg" alt="Framer" />},
+    { name: 'Vite', icon: <img src="/vite.svg" alt="Vite" />},
 ];
 
 function AboutMe() {

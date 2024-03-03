@@ -20,7 +20,7 @@ function LoaderPortfolio3d(props) {
             // After 4 seconds (when loading becomes false), start fading out the loader
             controls.start({
                 opacity: 0,
-                transition: { duration: 2 }
+                transition: { duration: 1 }
             });
         }
     }, [loading, controls]);
