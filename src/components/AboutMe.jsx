@@ -1,8 +1,6 @@
 import { motion, useAnimation } from 'framer-motion';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-
-
 
 const heading = 'INTRODUCTION';
 const heading2 = 'About Me';
@@ -20,6 +18,7 @@ function AboutMe() {
     const [contentRef, contentInView] = useInView();
     const contentControls = useAnimation();
     const iconControls = useAnimation();
+    const [selectedTech, setSelectedTech] = useState('');
 
     useEffect(() => {
         if (contentInView) {
@@ -30,6 +29,10 @@ function AboutMe() {
             iconControls.start({ y: 20, opacity: 0, transition: { duration: 1} });
         }
     }, [contentControls, iconControls, contentInView]);
+
+    const handleIconClick = (techName) => {
+        setSelectedTech(techName);
+    };
 
     return (
         <div className="bg-backgroundColorPrimary">
@@ -44,12 +47,17 @@ function AboutMe() {
                 </motion.div>
                 <motion.div initial={{ opacity: 0 }} animate={iconControls} className="mt-12 flex items-center w-full md:justify-between" style={{ display: 'flex', gap: '10px' }}>
                     {techStackIcons.map((tech, index) => (
-                        <motion.div key={index} initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.5 * (index + 1) }} className="relative flex flex-col items-center justify-center border-gradient md:bg-backgroundColorTertiary md:h-40 md:w-40 mr-4 md:mr-0" >
+                        <motion.div key={index} initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.5 * (index + 1) }} className="relative flex flex-col items-center justify-center border-gradient md:bg-backgroundColorTertiary md:h-40 md:w-40 mr-4 md:mr-0" onClick={() => handleIconClick(tech.name)}>
                             <div className="flex items-center justify-center ">{tech.icon}</div>
-                            <h1 className="hidden lg:block mt-4 text-center text-textColorSecondary text-base font-bold">{tech.name}</h1>
+                            <h1 className="hidden md:block mt-4 text-center text-textColorSecondary text-base font-bold">{tech.name}</h1>
                         </motion.div>
                     ))}
                 </motion.div>
+                {selectedTech && (
+                    <div className="md:hidden mt-6 text-center sm:text-left text-textColorSecondary text-base font-bold">
+                        {selectedTech}
+                    </div>
+                )}
             </div>
         </div>
     );
