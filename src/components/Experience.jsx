@@ -33,7 +33,14 @@ const myExperience = [
     {
         title: "NFT Trader",
         subtitle: "Ethereum",
-        description: "Successfully traded NFTs, achieving financial milestones such as paying off my university fees and travelling around the world in 2023.",
+        description: "Crypto paid off my college debt and allowed me to travel around the world for the whole of 2023.",
+        description2: "Track my active wallets here:" +
+            " <a href='https://nftbank.ai/portfolio/0x33b4bd50652e6f3561c57954f1A54f24349a41f0?network_id=mainnet' target='_blank'>(Chanel)</a>" +
+            " <a href='https://nftbank.ai/portfolio/0xcC3eCcf3a756850D02C4c455547bA59f49595565?network_id=mainnet' target='_blank'>(Camomile)</a>" +
+            " <a href='https://nftbank.ai/portfolio/0xF1c43051f63147039669A7e4b19D07107418D30D?network_id=mainnet' target='_blank'>(Cestia)</a>" +
+            " <a href='https://nftbank.ai/portfolio/0xAfd5B22D182590d9EE8E3F7F0dD8A0Da4DD65ce1?network_id=mainnet' target='_blank'>(Calina)</a>" +
+            " <a href='https://nftbank.ai/portfolio/0x34F2452Fc024d6226FF2068056CD01bb7401e9A0?network_id=mainnet' target='_blank'>(Callane)</a>",
+
         date: "January 2022 - December 2022",
         icon: <img src={eth} alt="ETH" />
     },
@@ -71,7 +78,7 @@ function Experience() {
                                     {experience.description && (
                                         <ul className="mt-4 text-textColorPrimary list-disc pl-6 space-y-2 text-xs">
                                             <li>{experience.description}</li>
-                                            {experience.description2 && <li>{experience.description2}</li>}
+                                            {experience.description2 && <li dangerouslySetInnerHTML={{__html: experience.description2}}></li>}
                                             {experience.description3 && <li>{experience.description3}</li>}
                                         </ul>
                                     )}
