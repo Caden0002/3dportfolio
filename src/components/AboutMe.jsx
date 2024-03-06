@@ -23,10 +23,10 @@ function AboutMe() {
     useEffect(() => {
         if (contentInView) {
             contentControls.start({ y: 0, opacity: 1, transition: { duration: 1 } });
-            iconControls.start({ y: 0, opacity: 1, transition: { duration: 1, delay: 0.5, staggerChildren: 0.5 } });
+            iconControls.start({ opacity: 1, transition: { duration: 1, delay: 0.5 } });
         } else {
             contentControls.start({ y: 20, opacity: 0, transition: { duration: 1} });
-            iconControls.start({ y: 20, opacity: 0, transition: { duration: 1} });
+            iconControls.start({ opacity: 0, transition: { duration: 1 } });
         }
     }, [contentControls, iconControls, contentInView]);
 
@@ -45,14 +45,14 @@ function AboutMe() {
                         <span dangerouslySetInnerHTML={{ __html: content2 }} />
                     </h1>
                 </motion.div>
-                <motion.div initial={{ opacity: 0 }} animate={iconControls} className="mt-12 flex items-center w-full md:justify-between" style={{ display: 'flex', gap: '10px' }}>
+                <div className="mt-12 flex items-center w-full md:justify-between" style={{ display: 'flex', gap: '10px' }}>
                     {techStackIcons.map((tech, index) => (
-                        <motion.div key={index} initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 0.5 * (index + 1) }} className="relative flex flex-col items-center justify-center border-gradient md:bg-backgroundColorTertiary md:h-40 md:w-40 mr-4 md:mr-0" onClick={() => handleIconClick(tech.name)}>
-                            <div className="flex items-center justify-center ">{tech.icon}</div>
+                        <motion.div key={index} initial={{ opacity: 0 }} animate={iconControls} transition={{ duration: 1, delay: 0.5 * (index + 1) }} className="relative flex flex-col items-center justify-center border-gradient md:bg-backgroundColorTertiary md:h-40 md:w-40 mr-4 md:mr-0" onClick={() => handleIconClick(tech.name)}>
+                            <div className="flex items-center justify-center">{tech.icon}</div>
                             <h1 className="hidden md:block mt-4 text-center text-textColorSecondary text-base font-bold">{tech.name}</h1>
                         </motion.div>
                     ))}
-                </motion.div>
+                </div>
                 {selectedTech && (
                     <div className="md:hidden mt-6 text-center sm:text-left text-textColorSecondary text-base font-bold">
                         {selectedTech}
