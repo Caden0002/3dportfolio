@@ -33,7 +33,7 @@ const myExperience = [
     {
         title: "NFT Trader",
         subtitle: "Ethereum",
-        description: "Crypto paid off my college debt and allowed me to travel around the world for the whole of 2023.",
+        description: "Thank you Vitalik, you changed my life.",
         description2: "Track my active wallets here:" +
             " <a href='https://nftbank.ai/portfolio/0x33b4bd50652e6f3561c57954f1A54f24349a41f0?network_id=mainnet' target='_blank'>(Chanel)</a>" +
             " <a href='https://nftbank.ai/portfolio/0xcC3eCcf3a756850D02C4c455547bA59f49595565?network_id=mainnet' target='_blank'>(Camomile)</a>" +
@@ -46,10 +46,14 @@ const myExperience = [
     },
     {
         title: "Web Developer",
-        description: "Engaged in the sale and development of websites, offering tailored solutions to clients' needs and preferences.",
+        subtitle: "DesigneCraft",
+        description: "Couldn't get hired so I started designing and selling websites.",
+        description2: "Check out my company at " +
+            " <a href='https://designecraft.com' target='_blank'>(DesigneCraft)</a>",
         date: "January 2024 - Present",
         icon: <img src={react} alt="react" />
-    },
+    }
+
 ];
 
 function Experience() {
