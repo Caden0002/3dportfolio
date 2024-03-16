@@ -84,7 +84,7 @@ function Experience() {
                                         <ul className="mt-4 text-textColorPrimary list-disc pl-6 space-y-2 text-xs">
                                             <li>{experience.description}</li>
                                             {experience.description2 && <li dangerouslySetInnerHTML={{__html: experience.description2}}></li>}
-                                            {experience.description3 && <li>{experience.description3}</li>}
+                                            {experience.description3 && <li dangerouslySetInnerHTML={{__html: experience.description3}}></li>}
                                         </ul>
                                     )}
                                 </VerticalTimelineElement>
