@@ -48,7 +48,8 @@ const myExperience = [
         title: "Web Developer",
         subtitle: "DesigneCraft",
         description: "Couldn't get hired so I started designing and selling websites.",
-        description2: "Check out my company at " +
+        description2: "Please let me know if there is a job opening. I love designing websites but I can't handle the business aspects at all.",
+        description3: "Check out my company at " +
             " <a href='https://designecraft.com' target='_blank'>(DesigneCraft)</a>",
         date: "January 2024 - Present",
         icon: <img src={react} alt="react" />
