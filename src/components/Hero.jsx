@@ -20,7 +20,7 @@ function Hero() {
     useEffect(() => {
         const interval = setInterval(() => {
             setOpacity(opacity === 1 ? 0 : 1);
-        }, 500);
+        }, 1200);
 
         return () => clearInterval(interval);
     }, [opacity]);
@@ -39,7 +39,7 @@ function Hero() {
                     {/* Computer Canvas */}
                     <ComputersCanvas />
                     {/* Content */}
-                    <div className="absolute inset-10 sm:inset-25 md:left-1/4 text-textColorPrimary" style={{ top: '12.5%', zIndex: 1 }}>
+                    <div className="absolute inset-25 md:left-1/4 text-textColorPrimary" style={{ top: '12.5%', zIndex: 1 }}>
                         <h1 className="text-base text-textColorTertiary">{header}</h1>
                         <h1 className="mt-4 text-5xl sm:text-6xl md:text-7xl 2xl:text-9xl font-bold">{name}</h1>
                         <h1 className="mt-6 text-base tracking-wide text-textColorSecondary">{header2}</h1>
