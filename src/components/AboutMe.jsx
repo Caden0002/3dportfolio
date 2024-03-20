@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 
 const heading = 'INTRODUCTION';
 const heading2 = 'About Me';
-const content = "I am a React Developer. I graduated with a Bachelor of Accountancy degree in 2023. Computers have always intrigued me, leading me to pursue a career in technology. I enjoy creating attractive and user-friendly interfaces. I'm passionate about using AI to address climate change and develop eco-friendly solutions. When I'm not working with computers, you can find me reading, running, or playing my piano.";
+const content = "I am a React Web Developer. I graduated with a Bachelor of Accountancy in 2023. Computers have always intrigued me, which led me to pursue a career in technology. I enjoy designing attractive and user-friendly interfaces. I am passionate about leveraging AI to address climate change and develop eco-friendly solutions. When I'm not working with computers, you can find me reading, running, or playing the piano.";
 const content2 = "Here are a few <span style='color: #62FAD7;'>tech stack</span> that I work with:";
 const techStackIcons = [
     { name: 'React', icon: <img src="/react.svg" alt="React" /> },
