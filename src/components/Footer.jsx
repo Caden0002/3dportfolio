@@ -3,9 +3,9 @@ import '../../styles.css';
 import { FaGithub, FaMediumM, FaLinkedin } from 'react-icons/fa';
 
 
-const heading = 'Designed and Built by Caden Chen';
+const heading = 'Designed and Built by Caden Chen.';
 const heading2 = 'Britanny Chiang';
-const heading3 = 'Adrian Hajdin';
+const heading3 = 'Adrian Hajdin.';
 
 const headingLink = "https://github.com/Caden0002/3dportfolio.git"
 const headingLink2 = "https://v4.brittanychiang.com/"
@@ -38,10 +38,10 @@ function Footer(props) {
                     {heading}
                 </a>
                 <a href={headingLink2} target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-textColorSecondary hover:text-textColorTertiary text-center z-10">
-                    {heading2}
+                    Inspired by {heading2}
                 </a>
                 <a href={headingLink3} target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-textColorSecondary hover:text-textColorTertiary text-center z-10">
-                    {heading3}
+                    & {heading3}
                 </a>
                 </div>
 
