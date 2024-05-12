@@ -4,8 +4,7 @@ import { useInView } from 'react-intersection-observer';
 
 const heading = 'INTRODUCTION';
 const heading2 = 'About Me';
-const content = "I am a React Web Developer. I graduated with a Bachelor of Accountancy in 2023. Computers have always intrigued me, which led me to pursue a career in technology. I enjoy designing attractive and user-friendly interfaces. I am passionate about leveraging AI to address climate change and develop eco-friendly solutions. When I'm not working with computers, you can find me reading, running, or playing the piano.";
-const content2 = "Here are a few <span style='color: #62FAD7;'>tech stack</span> that I work with:";
+const content = "I'm a React Developer and Figma Designer passionate about crafting aesthetically pleasing and user-friendly interfaces. Beyond coding, I love exploring cool design and animation, with a keen interest in 3D animation and modeling. I'm constantly seeking new ways to bring ideas to life through visual storytelling. \n\nI work with <span style='color: #62FAD7;'>React, Figma & Framer-Motion</span> extensively, empowering me to build dynamic and immersive web applications. When I'm not immersed in code or exploring the latest design trends, you can find me reading, running or playing the piano.";
 const techStackIcons = [
     { name: 'React', icon: <img src="/react.svg" alt="React" /> },
     { name: 'Tailwind', icon: <img src="/tailwind.svg" alt="Tailwind" />},
@@ -40,9 +39,8 @@ function AboutMe() {
                 <motion.div ref={contentRef} initial={{ y: 20, opacity: 0 }} animate={contentControls} className="md:w-2/3">
                     <h1 className="text-base text-textColorTertiary">{heading}</h1>
                     <h1 className="mt-4 text-5xl text-textColorPrimary font-bold">{heading2}</h1>
-                    <h1 className="mt-6 space-y-2 text-sm text-textColorSecondary leading-loose font-inter">{content}</h1>
-                    <h1 className="mt-6 space-y-2 text-sm text-textColorSecondary leading-loose font-inter">
-                        <span dangerouslySetInnerHTML={{ __html: content2 }} />
+                    <h1 className="mt-6 space-y-2 text-sm text-textColorSecondary leading-loose font-inter whitespace-pre-line">
+                        <span dangerouslySetInnerHTML={{ __html: content }} />
                     </h1>
                 </motion.div>
                 <div className="mt-12 flex items-center w-full md:justify-between" style={{ display: 'flex', gap: '10px' }}>
