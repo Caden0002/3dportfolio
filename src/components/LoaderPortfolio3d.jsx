@@ -27,7 +27,7 @@ function LoaderPortfolio3d(props) {
     }, []);
 
     // Text to be displayed below the helix loader
-    const loadingText = "This page may experience longer loading times due to the presence of 3D models.";
+    const loadingText = "This page may experience longer load time due to the presence of 3D models.";
 
     return (
         <motion.div
@@ -38,7 +38,7 @@ function LoaderPortfolio3d(props) {
                 // Use the helix loader component conditionally based on the loading state
                 <>
                     <l-helix size="90" speed="2.5" color="#62FAD7"></l-helix>
-                    <div className="text-textColorSecondary mt-12 mx-36 text-xs text-center leading-5 ">{loadingText}</div>
+                    <div className="text-textColorSecondary mt-12 mx-24 text-xs text-center leading-5 ">{loadingText}</div>
                 </>
             ) : null}
         </motion.div>
